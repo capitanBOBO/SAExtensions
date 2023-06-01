@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -13,6 +13,10 @@ let package = Package(
             targets: ["SAExtensions"]),
     ],
     dependencies: [
+        .package(
+            url: "https://github.com/capitanBOBO/SALayoutExtension.git",
+            from: Version(stringLiteral: "0.1.0")
+        )
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -21,7 +25,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SAExtensions",
-            dependencies: []),
+            dependencies: [
+                .byName(name: "SALayoutExtension")
+            ]),
         .testTarget(
             name: "SAExtensionsTests",
             dependencies: ["SAExtensions"]),

@@ -1,5 +1,5 @@
 import UIKit
-import RickAndMortySwiftApi
+import SALayoutExtension
 
 // MARK: Protocols
 

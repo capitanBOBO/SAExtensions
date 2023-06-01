@@ -1,3 +1,3 @@
 # SAExtensions
 
-A description of this package.
+Some extensions
